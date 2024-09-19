@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      th,
+      td {
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+      table {
+        border-spacing: 0px;
+        border-collapse: collapse;
+      }
+      tr.firstRow {
+        background-color: #048f8f;
+      }
+      tr.secondRow {
+        background-color: #f5f504;
+      }
+      tr.firstRow:hover {
+        background-color: #f5f504;
+      }
+      tr.secondRow:hover {
+        background-color: #048f8f;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-    <table>
-      <tr>
-        <td rowspan="3"></td>
-        <td colspan="2" rowspan="2"></td>
-        <td></td>
+    <table style="width: 50%">
+      <tr class="firstRow">
+        <td>1</td>
+        <td>2</td>
+        <td rowspan="2" colspan="2">3</td>
+        <td colspan="2">4</td>
+        <td rowspan="2" colspan="2">5</td>
+      </tr>
+      <tr class="secondRow">
+        <td colspan="2">1</td>
+        <td colspan="2">2</td>
       </tr>
       <tr>
-        <td rowspan="2"></td>
-      </tr>
-      <tr>
-        <td colspan="2"></td>
-      </tr>
-      <tr>
-        <td colspan="4"></td>
+        <td colspan="2">1</td>
+        <td colspan="7">2</td>
       </tr>
     </table>
   </body>
