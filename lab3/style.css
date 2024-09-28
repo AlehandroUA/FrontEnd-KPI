@@ -1,0 +1,58 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(255, 255, 255);
+  color: #000000;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 12px;
+}
+.block {
+  background: blanchedalmond;
+  margin: 2% auto;
+  width: 90%;
+  height: 80%;
+}
+.block-img {
+  float: left;
+  width: 20%;
+  height: 70%;
+  background: #4a828b;
+}
+.block-text {
+  float: right;
+  width: 80%;
+  height: 70%;
+  background: #3fa8e6;
+}
+
+.clear {
+  clear: both;
+}
+.block-img-down {
+  float: left;
+  width: 100%;
+  height: 15%;
+  background: #6462f0;
+}
+
+.block-text-down {
+  float: left;
+  width: 100%;
+  height: 15%;
+  background-color: #e7e7ab;
+}
+.block-img,
+.block-text,
+.block-img-down,
+.block-text-down {
+  font-size: 200%;
+  display: flex; /* Используем flexbox внутри блоков */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  text-align: center; /* Центрируем текст */
+}
