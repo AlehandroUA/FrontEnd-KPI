@@ -1,0 +1,61 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  color: #000000;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 12px;
+}
+
+.block {
+  background: blanchedalmond; /* Основной фон */
+  margin: 2% auto;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column; /* Вертикальное направление */
+}
+
+.top-row {
+  display: flex; /* Вложенный флекс-контейнер для верхней строки */
+  flex: 1; /* Занимает 70% высоты блока */
+}
+
+.block-img {
+  width: 40%; /* Ширина изображения в верхней строке */
+  background: lightblue; /* Цвет фона для изображения */
+  display: flex;
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+}
+
+.block-text {
+  width: 60%; /* Ширина текста в верхней строке */
+  background: #3fa8e6; /* Цвет фона для текста */
+  display: flex;
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+}
+
+.block-img-down,
+.block-text-down {
+  width: 100%; /* Занимает всю ширину */
+  height: 15%; /* Устанавливаем высоту */
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+}
+
+.block-img-down {
+  background: #6462f0; /* Цвет фона для нижнего изображения */
+}
+
+.block-text-down {
+  background-color: #e7e7ab; /* Цвет фона для нижнего текста */
+}
