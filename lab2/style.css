@@ -1,11 +1,11 @@
 th,
 td {
-  border: 2px solid black;
-  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 20px;
 }
 table {
+  border: 1px solid black;
   border-spacing: 0px;
-  border-collapse: collapse;
 }
 tr.firstRow {
   background-color: #048f8f;
@@ -19,54 +19,63 @@ tr.firstRow:hover {
 tr.secondRow:hover {
   background-color: #048f8f;
 }
-.cross {
-  position: absolute; /* Щоб перемістити хрест поверх */
+.crossFirst {
+  position: relative;
   width: 200px;
   height: 200px;
-  z-index: 2; /* Вищий індекс для того, щоб хрест був на колах */
+  background-color: white;
 }
 
-.line {
+.crossFirst::before,
+.crossFirst::after {
+  content: "";
+  z-index: 1;
   position: absolute;
   background-color: black;
 }
 
-.horizontal {
-  width: 240px;
-  height: 4px;
-  top: 59%;
-  left: 0;
+/* Горизонтальная линия */
+.crossFirst::before {
+  width: 200px;
+  height: 10px;
+  bottom: 50%;
+  left: 0%;
 }
 
-.vertical {
-  height: 240px;
-  width: 4px;
-  left: 59%;
-  top: 0;
+/* Вертикальная линия */
+.crossFirst::after {
+  width: 10px;
+  height: 200px;
+  top: 0%;
+  left: 47%;
 }
-
-/* Стилізація кола з діркою в центрі */
-.circle-container {
+.outerCirle {
+  width: 175px;
+  height: 175px;
   position: relative;
-  width: 200px;
-  height: 200px;
-}
-
-.outer-circle {
-  width: 200px;
-  height: 200px;
-  border: 20px solid black;
+  top: 5%;
+  left: 6%;
   border-radius: 50%;
+  background-color: black;
+}
+.centerCircle {
+  width: 100px;
+  height: 100px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1; /* Нижчий індекс для того, щоб кола були під хрестом */
+  top: 36px;
+  left: 38px;
+  border-radius: 50%;
+  background-color: white;
 }
 
-.inner-circle {
-  width: 20px;
-  height: 20px;
-  background-color: black;
+/* Внутренний круг, создающий "дырку" */
+.centerCircle::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background-color: rgb(0, 0, 0); /* Цвет "дырки" совпадает с фоном страницы */
   border-radius: 50%;
 }
