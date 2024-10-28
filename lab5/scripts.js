@@ -33,7 +33,7 @@ document
       newWin.document.write(arrayValues.join('<br>'));
     }
   });
-
+// task 2
 let selectedOption = 4;
 
 const createTable = function (rows, cols) {
